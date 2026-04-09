@@ -1,0 +1,305 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-main;
+}
+
+body {
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 80%;
+        background: linear-gradient(90deg, $bg 65%, $secondary 30%);
+
+        z-index: -1;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 5.5rem;
+        right: 15rem;
+        background-image: url("../img/flower.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        opacity: 5%;
+        width: 400px;
+        height: 400px;
+        z-index: -1;
+    }
+}
+
+.header {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr 1fr 1fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+    font-family: $font-main;
+
+    h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: $primary;
+
+        span {
+            color: $secondary;
+            margin-left: auto;
+        }
+    }
+
+    .nav-links {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        gap: 2rem;
+
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            a {
+                text-decoration: none;
+                color: $primary;
+                font-size: 1.2rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .more::after {
+                content: "v";
+                font-size: 0.8rem;
+                font-weight: bold;
+                margin-left: 0.5rem;
+            }
+
+
+        }
+
+
+
+        a:hover {
+            color: $secondary;
+        }
+    }
+
+    .search-icon {
+        width: 2rem;
+        height: 2rem;
+        margin-left: auto;
+        padding-right: 0.5rem;
+    }
+
+    .bag-icon {
+        width: 2rem;
+        height: 2rem;
+        margin-right: auto;
+        padding-left: 0.5rem;
+    }
+
+    .btn-primary {
+        @include btn;
+        text-decoration: underline;
+        color: $primary;
+        background-color: transparent;
+    }
+
+    .btn-secondary {
+        @include btn;
+        background-color: $primary;
+        color: white;
+
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    padding: 1.5rem;
+
+    .hero {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: start;
+        margin-bottom: 5rem;
+
+        .hero-content {
+            display: flex;
+            width: 48%;
+            flex-direction: column;
+            justify-content: left;
+            align-items: left;
+            margin-top: 3rem;
+
+
+            h1 {
+                font-size: 3.5rem;
+                font-weight: bold;
+                color: $primary;
+            }
+
+            p {
+                width: 85%;
+                font-size: 1.2rem;
+                font-weight: 400;
+                color: $font-color-2;
+                padding-top: 1rem;
+                padding-bottom: 3rem;
+            }
+
+            .hero-actions {
+                display: flex;
+                flex-direction: row;
+                justify-content: left;
+                align-items: left;
+                gap: 1rem;
+
+                .btn-primary {
+                    @include btn;
+                    text-decoration: underline;
+                    color: $primary;
+                    background-color: transparent;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 60px;
+                    width: 240px;
+                    gap: 1rem;
+                    padding: 0;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        border-radius: 50%;
+                        width: 50px;
+                        height: 50px;
+                        margin-right: 120px;
+                        background-color: white;
+                        z-index: -1;
+                    }
+
+                    img {
+                        width: 10%;
+                        object-fit: contain;
+                    }
+                }
+
+                .btn-secondary {
+                    @include btn;
+                    background-color: $primary;
+                    color: white;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-decoration: none;
+                    height: 60px;
+                    width: 170px;
+
+                }
+            }
+        }
+
+        .hero-image {
+
+            .hero-img {
+                position: absolute;
+                width: 80%;
+                height: auto;
+                top: 0.5rem;
+                right: 2rem;
+
+            }
+        }
+
+        .glass-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .card-1,
+            .card-2 {
+                @include glass-card;
+                width: 22%;
+                position: absolute;
+                right: 3rem;
+                bottom: 45%;
+
+                img {
+                    width: 10%;
+                    object-fit: contain;
+                }
+
+                p {
+                    font-size: 1rem;
+                    color: $font-color;
+                }
+
+                b {
+                    font-size: 1rem;
+                    color: $primary;
+                }
+            }
+
+            .card-2 {
+                right: 13rem;
+                bottom: 10rem;
+
+            }
+        }
+    }
+
+    .features-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 2.5rem;
+        gap: 4rem;
+        background-color: white;
+        width: 35%;
+        padding: 2rem;
+        border-radius: 1rem;
+
+        .feature-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+
+            h3 {
+                font-size: 1.5rem;
+                font-weight: 500;
+                color: $primary;
+            }
+
+            p {
+                font-size: 1rem;
+                font-weight: 400;
+                color: $font-color-2;
+                text-align: center;
+            }
+        }
+
+    }
+}

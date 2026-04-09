@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Boilerplate estático premium con HTML5 y SCSS.">
+    <title>Spa&Beauty</title>
+    <!-- Google Fonts: Poppins & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- Main Style (Linked directly for Vite) -->
+    <link rel="stylesheet" href="/src/scss/main.scss">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <!-- Logo -->
+        <h1>Glow<span>Queen</span></h1>
+        <!-- Navigation -->
+        <nav class="nav container">
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#facilities">Facilities</a></li>
+                <li><a class="more" href="#more">More</a></li>
+            </ul>
+        </nav>
+        <!-- Icons -->
+        <img src="./src/img/search-icon.svg" alt="search-icon" class="search-icon">
+        <img src="./src/img/bag-icon.svg" alt="bag-icon" class="bag-icon">
+        <!-- Buttons -->
+        <button class="btn-primary">Sign In</button>
+        <button class="btn-secondary">Sign Up</button>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <!-- Title -->
+                <h1>Bring back the beauty and glow of your skin</h1>
+                <!-- Paragraph -->
+                <p>We provide you various treatments from head to toe using the best product, advanced technology,
+                    and
+                    affordable price
+                </p>
+                <!-- Buttons -->
+                <div class="hero-actions">
+                    <a href="#" class="btn-secondary">Book Now</a>
+                    <a href="#" class="btn-primary"><img src="./src/img/play-icon.svg" alt="play-icon">Watch
+                        Video</a>
+                </div>
+            </div>
+            <!-- Hero Image -->
+            <div class="hero-image">
+                <img class="hero-img" src="./src/img/girl-image.svg" alt="girl-image">
+                <!-- Glass Card -->
+                <div class="glass-card">
+                    <div class="card-1">
+                        <img src="./src/img/quotations-marks.svg" alt="quotations-marks">
+                        <p>I have a regular schedule to take treatment from GlowQueen, they gave me the best service
+                            and
+                            treatment ever to maintain the beauty and health of my skin</p>
+                        <b>Sophia Princeton</b>
+                    </div>
+                    <div class="card-2">
+                        <img src="./src/img/quotations-marks.svg" alt="quotations-marks">
+                        <p>For the past few years, I've had a hard time finding the right place for skin care to
+                            deal
+                            with my complicated skin condition, thank God I found GlowQueen to treat my skin</p>
+                        <b>Tamara Jules</b>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features-container">
+            <div class="feature-card">
+                <i class="icon"><img src="./src/img/therapist-icon.svg" alt="treatment-icon"></i>
+                <h3>15+</h3>
+                <p>Special <br> Treatment</p>
+            </div>
+            <div class="feature-card">
+                <i class="icon"><img src="./src/img/treatment-icon.svg" alt="therapist-icon"></i>
+                <h3>25+</h3>
+                <p>Professional <br> Therapist </p>
+            </div>
+            <div class="feature-card">
+                <i class="icon"><img src="./src/img/cream-icon.svg" alt="cream-icon"></i>
+                <h3>100%</h3>
+                <p>Herbal <br> Cream Formula</p>
+            </div>
+        </section>
+    </main>
+
+</body>
+
+</html>
