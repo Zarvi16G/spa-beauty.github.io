@@ -1,0 +1,312 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 80%;
+  background: linear-gradient(90deg, #FAF8F5 65%, #A9D6CB 30%);
+  z-index: -1;
+}
+body::after {
+  content: "";
+  position: absolute;
+  top: 5.5rem;
+  right: 15rem;
+  background-image: url("../img/flower.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 5%;
+  width: 400px;
+  height: 400px;
+  z-index: -1;
+}
+
+.header {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr 1fr 1fr 1fr;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Poppins";
+}
+.header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #264065;
+}
+.header h1 span {
+  color: #A9D6CB;
+  margin-left: auto;
+}
+.header .nav-links {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 2rem;
+}
+.header .nav-links li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header .nav-links li:hover {
+  cursor: pointer;
+  color: #A9D6CB;
+}
+.header .nav-links li a {
+  text-decoration: none;
+  color: #264065;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header .nav-links li .more::after {
+  content: "v";
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-left: 0.5rem;
+}
+.header .nav-links a:hover {
+  color: #A9D6CB;
+}
+.header .search-icon {
+  width: 2rem;
+  height: 2rem;
+  margin-left: auto;
+  padding-right: 0.5rem;
+}
+.header .bag-icon {
+  width: 2rem;
+  height: 2rem;
+  margin-right: auto;
+  padding-left: 0.5rem;
+}
+.header .btn-primary {
+  font-size: 1rem;
+  border-radius: 2rem;
+  border: none;
+  width: 150px;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+}
+.header .btn-primary:hover {
+  background-color: white;
+}
+.header .btn-primary {
+  text-decoration: underline;
+  color: #264065;
+  background-color: transparent;
+}
+.header .btn-secondary {
+  font-size: 1rem;
+  border-radius: 2rem;
+  border: none;
+  width: 150px;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+}
+.header .btn-secondary:hover {
+  background-color: white;
+}
+.header .btn-secondary {
+  background-color: #264065;
+  color: white;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  padding: 1.5rem;
+}
+main .hero {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
+  margin-bottom: 5rem;
+}
+main .hero .hero-content {
+  display: flex;
+  width: 48%;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  margin-top: 3rem;
+}
+main .hero .hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #264065;
+}
+main .hero .hero-content p {
+  width: 85%;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #909090;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+}
+main .hero .hero-content .hero-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: left;
+  gap: 1rem;
+}
+main .hero .hero-content .hero-actions .btn-primary {
+  font-size: 1rem;
+  border-radius: 2rem;
+  border: none;
+  width: 150px;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+}
+main .hero .hero-content .hero-actions .btn-primary:hover {
+  background-color: #A9D6CB;
+}
+main .hero .hero-content .hero-actions .btn-primary {
+  text-decoration: underline;
+  color: #264065;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 240px;
+  gap: 1rem;
+  padding: 0;
+}
+main .hero .hero-content .hero-actions .btn-primary::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-right: 120px;
+  background-color: white;
+  z-index: -1;
+}
+main .hero .hero-content .hero-actions .btn-primary img {
+  width: 10%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main .hero .hero-content .hero-actions .btn-secondary {
+  font-size: 1rem;
+  border-radius: 2rem;
+  border: none;
+  width: 150px;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+}
+main .hero .hero-content .hero-actions .btn-secondary:hover {
+  background-color: #A9D6CB;
+}
+main .hero .hero-content .hero-actions .btn-secondary {
+  background-color: #264065;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  height: 60px;
+  width: 170px;
+}
+main .hero .hero-image .hero-img {
+  position: absolute;
+  width: 80%;
+  height: auto;
+  top: 0.5rem;
+  right: 2rem;
+  z-index: 0;
+  pointer-events: none;
+}
+main .hero .glass-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .hero .glass-card .card-1,
+main .hero .glass-card .card-2 {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  padding: 1rem;
+  gap: 1rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 1rem;
+  width: 22%;
+  position: absolute;
+  right: 3rem;
+  bottom: 45%;
+}
+main .hero .glass-card .card-1 img,
+main .hero .glass-card .card-2 img {
+  width: 10%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main .hero .glass-card .card-1 p,
+main .hero .glass-card .card-2 p {
+  font-size: 1rem;
+  color: #070D15;
+}
+main .hero .glass-card .card-1 b,
+main .hero .glass-card .card-2 b {
+  font-size: 1rem;
+  color: #264065;
+}
+main .hero .glass-card .card-2 {
+  right: 13rem;
+  bottom: 10rem;
+}
+main .features-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 2.5rem;
+  gap: 4rem;
+  background-color: white;
+  width: 35%;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+main .features-container .feature-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+main .features-container .feature-card h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #264065;
+}
+main .features-container .feature-card p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #909090;
+  text-align: center;
+}/*# sourceMappingURL=main.css.map */

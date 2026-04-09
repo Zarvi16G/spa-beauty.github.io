@@ -20,3 +20,15 @@
     background-color: $bg-card;
     border-radius: 1rem;
 }
+
+@mixin hover-btn {
+    &:hover {
+        background-color: $secondary;
+    }
+}
+
+@mixin hover-btn-2 {
+    &:hover {
+        background-color: white;
+    }
+}

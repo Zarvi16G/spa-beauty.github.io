@@ -71,6 +71,11 @@ body {
             align-items: center;
             justify-content: center;
 
+            &:hover {
+                cursor: pointer;
+                color: $secondary;
+            }
+
             a {
                 text-decoration: none;
                 color: $primary;
@@ -78,6 +83,8 @@ body {
                 display: flex;
                 align-items: center;
                 justify-content: center;
+
+
             }
 
             .more::after {
@@ -113,6 +120,7 @@ body {
 
     .btn-primary {
         @include btn;
+        @include hover-btn-2;
         text-decoration: underline;
         color: $primary;
         background-color: transparent;
@@ -120,6 +128,7 @@ body {
 
     .btn-secondary {
         @include btn;
+        @include hover-btn-2;
         background-color: $primary;
         color: white;
 
@@ -175,6 +184,7 @@ main {
 
                 .btn-primary {
                     @include btn;
+                    @include hover-btn;
                     text-decoration: underline;
                     color: $primary;
                     background-color: transparent;
@@ -205,6 +215,7 @@ main {
 
                 .btn-secondary {
                     @include btn;
+                    @include hover-btn;
                     background-color: $primary;
                     color: white;
                     display: flex;
@@ -226,7 +237,8 @@ main {
                 height: auto;
                 top: 0.5rem;
                 right: 2rem;
-
+                z-index: 0;
+                pointer-events: none;
             }
         }
 
